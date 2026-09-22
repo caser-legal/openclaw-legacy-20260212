@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "15b55919-3195-4277-a4ff-a3d79ce71b5d",
+      "agentId": "main",
+      "name": "wopr-30min-command-loop",
+      "enabled": true,
+      "createdAtMs": 1770899910770,
+      "updatedAtMs": 1770931801748,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/30 * * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Reminder: 30-minute WOPR command cycle. You are sending Falken a standing every-30-minute operations update. Do this each run: (1) Review ~/.openclaw/workspace/EXECUTION-QUEUE.md, ~/.openclaw/workspace/WORKFORCE.md, and newest files in ~/.openclaw/workspace/reports. (2) If no meaningful active work is running, choose the highest-leverage next task and execute it immediately (spawn focused coding/research subagents when helpful). (3) Integrate results into artifacts in workspace. (4) Send Falken a concise status update with exactly these sections: DONE, IN PROGRESS, NEXT, BLOCKERS. If there are no blockers, write 'BLOCKERS: none'. Never reply NO_REPLY for this reminder; always provide the update."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "channel:1471415223171813521",
+        "bestEffort": true
+      },
+      "state": {
+        "nextRunAtMs": 1770933600000,
+        "lastRunAtMs": 1770931800010,
+        "lastStatus": "ok",
+        "lastDurationMs": 1738,
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "879874b1-bff2-4892-a5be-be269fabfe89",
+      "agentId": "main",
+      "name": "wopr-10min-status-updates-discord",
+      "enabled": true,
+      "createdAtMs": 1770900991980,
+      "updatedAtMs": 1770931802019,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/10 * * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "Reminder: send Falken a concise status update in #workspace (what was completed, what is in progress, blockers/next action). This is the 10-minute check-in cadence Falken requested."
+      },
+      "state": {
+        "nextRunAtMs": 1770932400000,
+        "lastRunAtMs": 1770931801748,
+        "lastStatus": "ok",
+        "lastDurationMs": 271,
+        "consecutiveErrors": 0
+      }
+    }
+  ]
+}
