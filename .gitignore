@@ -1,0 +1,13 @@
+# Local OpenClaw state. Do not commit.
+credentials/
+identity/
+devices/
+memory/
+logs/
+media/
+sessions/
+openclaw.json
+openclaw.json.bak
+openclaw.json.backup.*
+agents-backup-*.tar.gz
+**/auth-profiles.json

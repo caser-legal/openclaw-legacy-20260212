@@ -1,0 +1,68 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                    🚀 DAILY DRIVER QUICK REFERENCE                   ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                      ║
+║  CODING (Terminal Interactive)                                       ║
+║  ─────────────────────────────                                       ║
+║  k ./project          Start coding with Kimi (best overall)          ║
+║  q ./project          Code with Qwen (great for coding)              ║
+║  d ./project          Code with DeepSeek (good reasoning)            ║
+║  m ./project          Code with Mistral (most powerful)              ║
+║  Ctrl+C               Exit (LiteLLM keeps running in background)     ║
+║                                                                      ║
+║  CODING (Browser - Survives Terminal Close)                          ║
+║  ───────────────────────────────────────────                         ║
+║  kimi-web-start       Open Kimi in browser (localhost:8080)          ║
+║  kimi-web-stop        Stop browser session                           ║
+║                                                                      ║
+║  AI AGENTS (Background)                                              ║
+║  ───────────────────────                                             ║
+║  claw                 Start everything + open TUI                    ║
+║  claw-status          Check if agents running                        ║
+║  ls ~/.openclaw/workspace/reports/    See agent outputs              ║
+║                                                                      ║
+║  SERVICES (Start/Stop Individual)                                    ║
+║  ─────────────────────────────────                                   ║
+║  litellm-start        Start AI model proxy (port 4000)               ║
+║  litellm-stop         Stop AI model proxy                            ║
+║  litellm-status       Check proxy status                             ║
+║                                                                      ║
+║  claw-start           Start AI agents (port 18789)                   ║
+║  claw-stop            Stop AI agents                                 ║
+║                                                                      ║
+║  HELPFUL                                                             ║
+║  ───────                                                             ║
+║  a                    Show all commands                              ║
+║  models               List available AI models                       ║
+║                                                                      ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  PORTS: 4000 = LiteLLM | 18789 = OpenClaw | 8080 = Kimi Web          ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+3 USE CASES:
+
+1. QUICK CODING SESSION
+   $ cd ~/project
+   $ k
+   > /add file.swift
+   > "Add login feature"
+   > /commit
+   > Ctrl+C
+
+2. LONG CODING SESSION (Browser)
+   $ kimi-web-start
+   # Browser opens automatically
+   # Close terminal, keep coding
+   $ kimi-web-stop  # When done
+
+3. CHECK AI AGENTS
+   $ claw
+   # Opens TUI to see agent status
+   # Or just check reports:
+   $ ls ~/.openclaw/workspace/reports/
+
+KEY LOCATIONS:
+  Config:     ~/.zshrc (API keys)
+  Reports:    ~/.openclaw/workspace/reports/
+  Logs:       ~/.openclaw/logs/
+  LiteLLM:    ~/Desktop/config.yaml
